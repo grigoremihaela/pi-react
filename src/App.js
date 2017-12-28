@@ -25,12 +25,12 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to Silo Temperature Sensor</h1>
           <p className="App-intro">by Miha</p>
+          <p className="App-intro">
+            {this.state.temperatures.map(temperature =>
+              <div key={temperature.id}>The last read temperature is: <b>{temperature.temp}</b>°C.</div>
+            )} 
+          </p>
         </header>
-        <p className="App-intro">
-          {this.state.temperatures.map(temperature =>
-            <div key={temperature.id}>The last read temperature is: <b>{temperature.temp}</b>°C.</div>
-          )} 
-        </p>
       </div>
     );
   }
