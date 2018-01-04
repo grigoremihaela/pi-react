@@ -1,5 +1,5 @@
 {
-  "name": "pi-react",
+  "name": "pi-temp-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,12 +8,20 @@
     "react-scripts": "1.0.17",
     "serve": "^6.4.3"
   },
+  "engines": {
+    "node": "8.4.0",
+    "npm": "5.5.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "cp -a build/. public",
+    "heroku-postbuild": "npm run build"
   },
-  "homepage": "https://pi-react.herokuapp.com/",
+  "homepage": "https://pi-temp-react.herokuapp.com/",
   "proxy": "https://pi-temp-api.herokuapp.com/"
 }
+
+
